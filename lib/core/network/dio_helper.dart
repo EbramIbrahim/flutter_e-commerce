@@ -5,9 +5,9 @@ import 'package:e_commerce/core/network/end_points.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioHelper {
-  static Dio? dio;
+  Dio? dio;
 
-  static dioInit() {
+  DioHelper() {
     dio ??= Dio(
       BaseOptions(
         baseUrl: AppEndPoints.baseUrl,
@@ -18,7 +18,7 @@ class DioHelper {
     dio!.interceptors.add(PrettyDioLogger());
   }
 
-  static getRequest({
+  getRequest({
     required String endPoitns,
     required Map<String, dynamic> queryMaps,
   }) async {
@@ -30,7 +30,7 @@ class DioHelper {
     }
   }
 
-  static postRequest({
+  postRequest({
     required String endPoints,
     required Map<String, dynamic> body,
   }) async {

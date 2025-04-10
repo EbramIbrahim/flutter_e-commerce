@@ -12,5 +12,5 @@ class AppAssets {
   static const String arrow = "${_imagePath}arrow.png";
   static const String logout = "${_imagePath}logout_ic.png";
 
-  static const String loading = "${_lottiePath}loading.jsno";
+  static const String loading = "${_lottiePath}loading.json";
 }

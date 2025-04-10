@@ -1,8 +1,8 @@
-class LoginReponseModel {
+class AuthResponseModel {
   String? token;
-  LoginReponseModel({this.token});
+  AuthResponseModel({this.token});
 
-  LoginReponseModel.fromMap(Map<String, dynamic> map) {
+  AuthResponseModel.fromMap(Map<String, dynamic> map) {
     token = map['token'];
   }
 
