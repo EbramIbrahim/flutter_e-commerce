@@ -3,7 +3,7 @@ import 'package:e_commerce/core/utils/service_locator.dart';
 import 'package:e_commerce/features/account/widget/account_screen.dart';
 import 'package:e_commerce/features/address/widget/address_screen.dart';
 import 'package:e_commerce/features/cart/widget/cart_screen.dart';
-import 'package:e_commerce/features/home/widget/home_screen.dart';
+import 'package:e_commerce/features/home/widget/main_screen.dart';
 import 'package:e_commerce/features/login/cubit/login_cubit.dart';
 import 'package:e_commerce/features/login/widget/login_screen.dart';
 import 'package:e_commerce/features/product_details/widget/produce_details_screen.dart';
@@ -37,7 +37,7 @@ class RouterGeneration {
       GoRoute(
         path: AppRouter.homeScreen,
         name: AppRouter.homeScreen,
-        builder: (context, state) => HomeScreen(),
+        builder: (context, state) => MainScreen(),
       ),
       GoRoute(
         path: AppRouter.detailsScreen,

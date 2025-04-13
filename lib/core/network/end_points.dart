@@ -5,6 +5,6 @@ class AppEndPoints {
   static String loginEndPoint = "auth/login";
   static String productsEndPoint = "products";
   static String categoriesEndPoint = "products/categories";
+  static String catProductsEndPoint = "products/category";
   static String cartsEndPoint = "carts";
-  static String cartsProductsEndPoint = "category";
 }

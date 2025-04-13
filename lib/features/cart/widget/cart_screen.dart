@@ -4,6 +4,7 @@ import 'package:e_commerce/core/widget/primary_button_widget.dart';
 import 'package:e_commerce/features/cart/model/product.dart';
 import 'package:e_commerce/features/cart/widget/product_cart_details_widget.dart';
 import 'package:e_commerce/features/cart/widget/total_price_widget.dart';
+import 'package:e_commerce/features/home/model/products.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,39 +40,35 @@ class CartScreen extends StatelessWidget {
                   child: ListView(
                     children: [
                       ProductCartDetailsWidget(
-                        product: Product(
-                          productImage:
+                        product: Products(
+                          image:
                               "https://chriscross.in/cdn/shop/files/ChrisCrossNavyBlueCottonT-Shirt.jpg?v=1740994598",
-                          productName: "Regular Fit Slogan",
-                          productPrice: "1,190",
-                          productSize: "L",
+                          title: "Regular Fit Slogan",
+                          price: 10.312,
                         ),
                       ),
                       ProductCartDetailsWidget(
-                        product: Product(
-                          productImage:
+                        product: Products(
+                          image:
                               "https://chriscross.in/cdn/shop/files/ChrisCrossNavyBlueCottonT-Shirt.jpg?v=1740994598",
-                          productName: "Regular Fit Slogan",
-                          productPrice: "1,190",
-                          productSize: "L",
+                          title: "Regular Fit Slogan",
+                          price: 10.312,
                         ),
                       ),
                       ProductCartDetailsWidget(
-                        product: Product(
-                          productImage:
+                        product: Products(
+                          image:
                               "https://chriscross.in/cdn/shop/files/ChrisCrossNavyBlueCottonT-Shirt.jpg?v=1740994598",
-                          productName: "Regular Fit Slogan",
-                          productPrice: "1,190",
-                          productSize: "L",
+                          title: "Regular Fit Slogan",
+                          price: 10.312,
                         ),
                       ),
                       ProductCartDetailsWidget(
-                        product: Product(
-                          productImage:
+                        product: Products(
+                          image:
                               "https://chriscross.in/cdn/shop/files/ChrisCrossNavyBlueCottonT-Shirt.jpg?v=1740994598",
-                          productName: "Regular Fit Slogan",
-                          productPrice: "1,190",
-                          productSize: "L",
+                          title: "Regular Fit Slogan",
+                          price: 10.312,
                         ),
                       ),
                     ],

@@ -20,7 +20,7 @@ class DioHelper {
 
   getRequest({
     required String endPoitns,
-    required Map<String, dynamic> queryMaps,
+    Map<String, dynamic>? queryMaps,
   }) async {
     try {
       final response = await dio!.get(endPoitns, queryParameters: queryMaps);

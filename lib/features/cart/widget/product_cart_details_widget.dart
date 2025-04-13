@@ -1,13 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_commerce/core/styling/app_colors.dart';
 import 'package:e_commerce/core/styling/app_styles.dart';
-import 'package:e_commerce/features/cart/model/product.dart';
 import 'package:e_commerce/features/cart/widget/change_product_amount_widget.dart';
+import 'package:e_commerce/features/home/model/products.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductCartDetailsWidget extends StatelessWidget {
-  final Product product;
+  final Products product;
   const ProductCartDetailsWidget({super.key, required this.product});
 
   @override
@@ -30,7 +30,7 @@ class ProductCartDetailsWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             CachedNetworkImage(
-              imageUrl: product.productImage,
+              imageUrl: product.image ?? "",
               width: 83.w,
               height: 79.h,
             ),
@@ -43,7 +43,7 @@ class ProductCartDetailsWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        product.productName,
+                        product.title ?? "",
                         style: AppStyles.titleTextStyle.copyWith(
                           fontSize: 14.sp,
                         ),
@@ -61,7 +61,7 @@ class ProductCartDetailsWidget extends StatelessWidget {
                   ),
                   const SizedBox(height: 1),
                   Text(
-                    "Size ${product.productSize}",
+                    "Size",
                     style: AppStyles.gray12MediumTextStyle.copyWith(
                       fontSize: 14.sp,
                     ),
@@ -71,7 +71,7 @@ class ProductCartDetailsWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        product.productPrice,
+                        product.price.toString(),
                         style: AppStyles.titleTextStyle.copyWith(
                           fontSize: 14.sp,
                         ),

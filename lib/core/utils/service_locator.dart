@@ -1,5 +1,8 @@
 import 'package:e_commerce/core/network/dio_helper.dart';
 import 'package:e_commerce/core/utils/storage_services.dart';
+import 'package:e_commerce/features/home/cubit/category_cubit.dart';
+import 'package:e_commerce/features/home/cubit/product_cubit.dart';
+import 'package:e_commerce/features/home/repository/home_repository.dart';
 import 'package:e_commerce/features/login/cubit/login_cubit.dart';
 import 'package:e_commerce/features/login/repository/login_repository.dart';
 import 'package:e_commerce/features/register/cubit/register_cubit.dart';
@@ -21,4 +24,9 @@ void setupServiceLocator() {
 
   sl.registerLazySingleton(() => RegisterRepository(sl<DioHelper>()));
   sl.registerFactory(() => RegisterCubit(sl<RegisterRepository>()));
+
+  sl.registerLazySingleton(() => HomeRepository(sl<DioHelper>()));
+
+  sl.registerFactory(() => CategoryCubit(sl<HomeRepository>()));
+  sl.registerFactory(() => ProductCubit(sl<HomeRepository>()));
 }
