@@ -6,7 +6,8 @@ import 'package:e_commerce/features/cart/widget/cart_screen.dart';
 import 'package:e_commerce/features/home/widget/main_screen.dart';
 import 'package:e_commerce/features/login/cubit/login_cubit.dart';
 import 'package:e_commerce/features/login/widget/login_screen.dart';
-import 'package:e_commerce/features/product_details/widget/produce_details_screen.dart';
+import 'package:e_commerce/features/product_details/cubit/product_details_cubit.dart';
+import 'package:e_commerce/features/product_details/widget/product_details_screen.dart';
 import 'package:e_commerce/features/register/cubit/register_cubit.dart';
 import 'package:e_commerce/features/register/widget/register_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,7 +43,12 @@ class RouterGeneration {
       GoRoute(
         path: AppRouter.detailsScreen,
         name: AppRouter.detailsScreen,
-        builder: (context, state) => ProduceDetailsScreen(),
+        builder: (context, state) {
+          return BlocProvider(
+            create: (context) => sl<ProductDetailsCubit>(),
+            child: ProductDetailsScreen(id: state.extra as int),
+          );
+        },
       ),
       GoRoute(
         path: AppRouter.accountScreen,

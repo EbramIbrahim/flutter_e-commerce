@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddCardWidget extends StatelessWidget {
-  const AddCardWidget({super.key});
+  final double? price;
+  const AddCardWidget({super.key, this.price});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class AddCardWidget extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "1,190",
+                  "€$price",
                   style: AppStyles.black16W500TextStyle.copyWith(
                     fontSize: 24.sp,
                   ),

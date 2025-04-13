@@ -5,6 +5,8 @@ import 'package:e_commerce/features/home/cubit/product_cubit.dart';
 import 'package:e_commerce/features/home/repository/home_repository.dart';
 import 'package:e_commerce/features/login/cubit/login_cubit.dart';
 import 'package:e_commerce/features/login/repository/login_repository.dart';
+import 'package:e_commerce/features/product_details/cubit/product_details_cubit.dart';
+import 'package:e_commerce/features/product_details/repository/product_details_repository.dart';
 import 'package:e_commerce/features/register/cubit/register_cubit.dart';
 import 'package:e_commerce/features/register/repository/register_repository.dart';
 import 'package:get_it/get_it.dart';
@@ -29,4 +31,8 @@ void setupServiceLocator() {
 
   sl.registerFactory(() => CategoryCubit(sl<HomeRepository>()));
   sl.registerFactory(() => ProductCubit(sl<HomeRepository>()));
+
+  sl.registerLazySingleton(() => ProductDetailsRepository(sl<DioHelper>()));
+
+  sl.registerFactory(() => ProductDetailsCubit(sl<ProductDetailsRepository>()));
 }

@@ -50,7 +50,6 @@ class _HomeScreen extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 20),
               Text("Discover", style: AppStyles.titleTextStyle),
               const SizedBox(height: 16),
 
@@ -165,6 +164,7 @@ class _HomeScreen extends State<HomeScreen> {
                           children:
                               products.map((product) {
                                 return ProductCardItem(
+                                  id: product.id,
                                   imageUrl: product.image ?? "",
                                   productName: product.title ?? "",
                                   productPrice: "€${product.price}",
