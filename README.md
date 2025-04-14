@@ -6,11 +6,20 @@
 
 A modern Ecommerce application featuring real-time Products updates, Products content, and seamless authentication. Built with Flutter and integrated with Firebase services.
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/7d29f927-e298-494b-a6a1-6f0bed32e05d" width200>
-  <img src="https://github.com/user-attachments/assets/abc886fe-e99c-4846-a8e6-e166de6a9891" width200>
-  <img src="https://github.com/user-attachments/assets/205245fb-7576-4a6c-966a-eecc79a80b48" width200>
-</div>
+ <table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/7d29f927-e298-494b-a6a1-6f0bed32e05d" width200 height="500">
+    </td>
+    <td>
+        <img src="https://github.com/user-attachments/assets/abc886fe-e99c-4846-a8e6-e166de6a9891" width200 height="500">
+    </td>
+    <td>
+       <img src="https://github.com/user-attachments/assets/205245fb-7576-4a6c-966a-eecc79a80b48" width200 height="500">
+    </td>
+  </tr>
+</table>
+
 
 ## Features ✨
 - 🔐 Firebase Authentication (Email/Password)
